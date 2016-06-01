@@ -131,37 +131,119 @@ body {
   height: 100%;
 }
 body {
+  font-family: Sans-Serif;
+}
+h1 {
+  position: absolute;
+  z-index: 1;
+  margin: 20px 30px 0;
+  padding: 10px 20px;
+  background: yellow;
+  color: black;
+  font-weight: bold;
+  box-shadow: 1px 1px 1px 1px black;
+}
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+.flex.vertical {
+  flex-direction: column;
+}
+.flex.vertical .centre,
+.flex.vertical .center {
+  flex-direction: column;
+  display: flex;
+  flex: 1;
+}
+.flex.vertical .centre::before,
+.flex.vertical .center::before {
+  display: flex;
+  flex: 1;
+  content: ".";
+  color: transparent;
+}
+.flex.vertical .centre::after,
+.flex.vertical .center::after {
+  display: flex;
+  flex: 1;
+  content: ".";
+  color: transparent;
+}
+.flex > div,
+.flex > article {
+  display: flex;
+  flex: 1;
   position: relative;
-  background: teal;
+}
+.flex > div:nth-of-type(1),
+.flex > article:nth-of-type(1) {
+  background: #333;
+}
+.flex > div:nth-of-type(2),
+.flex > article:nth-of-type(2) {
+  background: #666;
+}
+.flex > div:nth-of-type(3),
+.flex > article:nth-of-type(3) {
+  background: #999;
+}
+h3 {
+  text-align: center;
+  width: 100%;
+}
+.fullheight {
+  height: 100%;
+}
+.fullwidth {
+  width: 100%;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  position: relative;
 }
 body * {
   font-family: sans-serif;
 }
 #no_here {
   position: absolute;
-  background: orange;
-  height: 30px;
-  width: 30px;
-  border-radius: calc( 30px / 2 );
+  z-index: 1000;
+  background: transparent;
+  border: solid 5px orange;
   animation: pulse 1s infinite ease-in-out;
+}
+.not-there {
+  background: ivory;
+}
+@keyframes move {
+  to {
+    top: 100px;
+    left: 300px;
+  }
 }
 @keyframes pulse {
   0% {
     height: 30px;
     width: 30px;
-    margin-top: 0;
-    margin-left: 0;
+    border-radius: 30px;
+    margin-top: -10px;
+    margin-left: -10px;
   }
   50% {
     height: calc( 30px / 2 );
     width: calc( 30px / 2 );
-    margin-top: calc( 30px / 4 );
-    margin-left: calc( 30px / 4 );
+    border-radius: 30px;
+    margin-top: -5px;
+    margin-left: -5px;
   }
   100% {
     height: 30px;
     width: 30px;
-    margin-top: 0;
-    margin-left: 0;
+    border-radius: 30px;
+    margin-top: -10px;
+    margin-left: -10px;
   }
 }

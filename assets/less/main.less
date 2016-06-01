@@ -1,4 +1,5 @@
 @import url("../bower_components/Blankslate/reset.less");
+@import url("../bower_components/flextra/assets/less/main.less");
 
 html,
 body {
@@ -7,40 +8,55 @@ body {
 
 body {
   position: relative;
-  background: teal;
   * {
     font-family: sans-serif;
   }
 }
 
 @diameter: 30px;
-@pointer-background: orange;
+@pointer-background: transparent;
+@pointer-border: orange;
+
 #no_here {
   position: absolute;
+  z-index: 1000;
   background: @pointer-background;
-  height: @diameter;
-  width: @diameter;
-  border-radius: ~'calc( @{diameter} / 2 )';
+  border: solid 5px @pointer-border;
   animation: pulse 1s infinite ease-in-out;
+}
+
+.not-there {
+  // outline: solid 1px red;
+  background: ivory;
+}
+
+@keyframes move {
+  to {
+    top: 100px;
+    left: 300px;
+  }
 }
 
 @keyframes pulse {
   0% {
     height: @diameter;
     width: @diameter;
-    margin-top: 0;
-    margin-left: 0;
+    border-radius: @diameter;
+    margin-top: -10px;
+    margin-left: -10px;
   }
   50% {
     height: ~'calc( @{diameter} / 2 )';
     width: ~'calc( @{diameter} / 2 )';
-    margin-top: ~'calc( @{diameter} / 4 )';
-    margin-left: ~'calc( @{diameter} / 4 )';
+    border-radius: @diameter;
+    margin-top: -5px;
+    margin-left: -5px;
   }
   100% {
     height: @diameter;
     width: @diameter;
-    margin-top: 0;
-    margin-left: 0;
+    border-radius: @diameter;
+    margin-top: -10px;
+    margin-left: -10px;
   }
 }
