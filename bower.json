@@ -1,7 +1,7 @@
 {
   "name": "obviate",
   "description": "For pointing stuff out",
-  "main": "index.html",
+  "main": "Gruntfile.js",
   "authors": [
     "Pete Haughie pete@republicofpete.net"
   ],
@@ -9,10 +9,8 @@
   "keywords": [
     "HTML",
     "LESS",
-    "Grunt",
-    "watch",
     "CSS",
-    "async"
+    "demo"
   ],
   "homepage": "https://github.com/Flowdeeps/obviate",
   "private": true,
@@ -24,6 +22,7 @@
     "tests"
   ],
   "dependencies": {
+    "flextra": "https://github.com/Flowdeeps/flextra.git",
     "cssrefresh": "http://cssrefresh.frebsite.nl/js/cssrefresh.js",
     "blankslate": "https://github.com/Flowdeeps/blankslate.git"
   }
