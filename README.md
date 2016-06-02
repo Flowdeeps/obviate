@@ -31,6 +31,7 @@ Things I'd like to see are:
 * Left, right, centre, middle, and bottom position on element
 * Different shaped cursors
 * Orientation based on proximity of window chrome
+* Watch for window resize event
 
 ## Probably won't do
 
