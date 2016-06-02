@@ -11,6 +11,9 @@ body {
   * {
     font-family: sans-serif;
   }
+  p {
+    line-height: 1.5em;
+  }
 }
 
 @diameter: 30px;
@@ -24,15 +27,18 @@ body {
   border: solid 5px @pointer-border;
   animation: pulse 1s infinite ease-in-out;
   transform: translate( -100px, -100px);
-  transition: transform 0s linear once; 
+  transition: transform 0s linear once;
 }
 
 .not-there {
-  background: ivory;
+  // background: ivory;
 }
 
 blink {
-  outline: solid 1px yellow;
+  // outline: solid 1px yellow;
+  background: ivory;
+  padding: 2px;
+  border-radius: 3px;
 }
 
 .flex {
@@ -41,26 +47,40 @@ blink {
   }
 }
 
+#trigger {
+  position: absolute;
+  margin: 20px 0;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 3px;
+  box-shadow: 0 3px 0 #000;
+  background: orange;
+  text-decoration: none;
+  #trigger:active {
+    background: green;
+  }
+}
+
 @keyframes pulse {
   0% {
     height: @diameter;
     width: @diameter;
     border-radius: @diameter;
-    margin-top: -10px;
-    margin-left: -10px;
+    margin-top: -8px;
+    margin-left: -8px;
   }
   50% {
     height: ~'calc( @{diameter} / 2 )';
     width: ~'calc( @{diameter} / 2 )';
     border-radius: @diameter;
-    margin-top: -5px;
-    margin-left: -5px;
+    margin-top: -3px;
+    margin-left: -3px;
   }
   100% {
     height: @diameter;
     width: @diameter;
     border-radius: @diameter;
-    margin-top: -10px;
-    margin-left: -10px;
+    margin-top: -8px;
+    margin-left: -8px;
   }
 }

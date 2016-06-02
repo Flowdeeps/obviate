@@ -2,7 +2,9 @@
 
 Everybody loves seeing a pulsing circle move around the page to important information right? Sure.
 
-## Installation
+![Isn't it obvious?](https://github.com/Flowdeeps/obviate/raw/master/assets/images/obviate.gif)
+
+## Set Up Dev Environment
 
 $npm install
 

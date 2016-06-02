@@ -32,7 +32,7 @@ window.onload = function() {
 					i = 0;
 				}
 
-				here.setAttribute( 'style', "transform: translate(" + getOffset( notThere[ i ] ).left + "px, "+ getOffset( notThere[ i ] ).top +"px); transition: transform 1s ease-in-out;");
+				here.setAttribute( 'style', "transform: translate(" + getOffset( notThere[ i ] ).left + "px, "+ getOffset( notThere[ i ] ).top +"px); transition: transform .5s ease-in-out;");
 
 			}
 
