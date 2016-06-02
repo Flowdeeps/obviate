@@ -208,24 +208,23 @@ body {
 body * {
   font-family: sans-serif;
 }
-a {
-  user-select: none;
-}
 #no_here {
   position: absolute;
   z-index: 1000;
   background: transparent;
   border: solid 5px orange;
   animation: pulse 1s infinite ease-in-out;
+  transform: translate(-100px, -100px);
+  transition: transform 0s linear once;
 }
 .not-there {
   background: ivory;
 }
-@keyframes move {
-  to {
-    top: 100px;
-    left: 300px;
-  }
+blink {
+  outline: solid 1px yellow;
+}
+.flex > div {
+  padding: 20px 40px;
 }
 @keyframes pulse {
   0% {

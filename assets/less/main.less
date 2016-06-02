@@ -13,10 +13,6 @@ body {
   }
 }
 
-a {
-  user-select: none;
-}
-
 @diameter: 30px;
 @pointer-background: transparent;
 @pointer-border: orange;
@@ -27,17 +23,21 @@ a {
   background: @pointer-background;
   border: solid 5px @pointer-border;
   animation: pulse 1s infinite ease-in-out;
+  transform: translate( -100px, -100px);
+  transition: transform 0s linear once; 
 }
 
 .not-there {
-  // outline: solid 1px red;
   background: ivory;
 }
 
-@keyframes move {
-  to {
-    top: 100px;
-    left: 300px;
+blink {
+  outline: solid 1px yellow;
+}
+
+.flex {
+  > div {
+    padding: 20px 40px;
   }
 }
 
