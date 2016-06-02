@@ -18,14 +18,18 @@ window.onload = function() {
 	    return { top: _y, left: _x };
 	}
 
-	trigger.onclick = function( event ) {
-		event.preventDefault();
+	var next = function() {
 		if ( i < ( notThere.length - 1 ) ) {
 			i++;
 		} else {
 			i = 0;
 		}
-		here.setAttribute( 'style', "transform: translate(" + getOffset( notThere[ i ] ).left + "px, "+ getOffset( notThere[ i ] ).top +"px); transition: transform 1s ease-in-out;");
+		here.setAttribute( 'style', "transform: translate(" + getOffset( notThere[ i ] ).left + "px, "+ getOffset( notThere[ i ] ).top +"px); transition: transform 1s ease-in-out;");		
+	}
+
+	trigger.onclick = function( event ) {
+		event.preventDefault();
+		next();
 	}
 
 };
