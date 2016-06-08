@@ -22,7 +22,6 @@ window.onload = function() {
 					i = 0;
 
 			var notThere = document.getElementsByTagName( 'blink' );
-			// var notThere = document.getElementsByClassName( 'not-there' );
 
 			var next = function() {
 
